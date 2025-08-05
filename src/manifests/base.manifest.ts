@@ -25,18 +25,19 @@ export const baseManifest = {
       128: 'assets/icons/icon-128x128.png',
     },
     default_title: pkg.name,
-    
   },
 
   // Optional
   // - - - - - - - - -
   author: {
-    email: author@example.com
+    email: 'author@example.com',
   },
   background: {
     service_worker: 'scripts/service-worker.ts',
     type: 'module',
-  },options_page: 'pages/options.html',content_scripts: [
+  },
+  options_page: 'pages/options.html',
+  content_scripts: [
     {
       js: ['scripts/content.tsx'],
       matches: ['<all_urls>'],
@@ -59,11 +60,5 @@ export const baseManifest = {
       },
     },
   },
-  permissions: [ 
-    'activeTab' 
-  ],
+  permissions: ['activeTab'],
 } satisfies Manifest
-
-
-
-

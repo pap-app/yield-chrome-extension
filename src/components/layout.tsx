@@ -1,13 +1,13 @@
-import type { ReactNode } from 'react'
+import { Outlet, useNavigate } from 'react-router-dom'
+import BottomNavigation from './bottom-navigation'
 
-export interface LayoutProps {
-  children?: ReactNode
-}
-
-export function Layout({ children }: LayoutProps) {
+export function Layout() {
   return (
-    <div className="flex items-center justify-center flex-col min-w-[360px] min-h-[400px] h-full w-full">
-      {children}
+    <div className="flex h-full flex-col">
+      <div className="flex-1 overflow-auto">
+        <Outlet />
+      </div>
+      <BottomNavigation />
     </div>
   )
 }

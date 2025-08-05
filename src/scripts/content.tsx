@@ -31,6 +31,20 @@ export function openOrCloseExtension(): void {
 // start listening for messages from (React) App
 chrome.runtime.onMessage.addListener(AppMessagesListener)
 
+const frameId = (frameConfig.iframe as { id: string }).id
+
+document.addEventListener('click', (event) => {
+  const iframe = document.getElementById(frameId)
+  if (!iframe) return
+
+  const isInsideIframe = event.composedPath().some((el) => el === iframe)
+
+  if (!isInsideIframe) {
+    console.log('✅ Clicked outside iframe, closing overlay')
+    unmountIframe()
+  }
+})
+
 // start listening for messages from iframe
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/message_event
 window.addEventListener('message', (event) => {

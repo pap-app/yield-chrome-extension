@@ -3,13 +3,12 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
-import bedframeConfig from "./src/_config/bedframe.config"
+import bedframeConfig from './src/_config/bedframe.config'
 
 const { manifest, pages } = bedframeConfig.extension
 const {
-	style: { fonts },
-  
-} = bedframeConfig.development.template.config  
+  style: { fonts },
+} = bedframeConfig.development.template.config
 
 export default defineConfig(({ command, mode }) => {
   return {
@@ -21,11 +20,11 @@ export default defineConfig(({ command, mode }) => {
     },
     plugins: [
       getManifest({ command, mode }, manifest, {
-        browser: mode
+        browser: mode,
       }),
       getFonts(fonts!),
       react(),
-      tailwindcss(),
+      // tailwindcss(),
     ],
     build: {
       outDir: resolve(__dirname, 'dist', mode),
@@ -34,16 +33,11 @@ export default defineConfig(({ command, mode }) => {
         input: pages,
       },
     },
-    
+
     server: {
       cors: {
-        origin: [
-          /chrome-extension:\/\//,
-        ],
+        origin: [/chrome-extension:\/\//],
       },
     },
   }
 })
-
-
-

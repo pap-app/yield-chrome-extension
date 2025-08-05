@@ -16,20 +16,21 @@ export function createIframe(): HTMLIFrameElement {
   Frame.src = (frameConfig.iframe as { src: string }).src
 
   // Assign styles
-  Frame.style.background = 'hsl(0 0% 14.9%)'
+  Frame.style.background = 'hsl(0 0% 14.9%)' //'#84cc16' //'hsl(0 0% 14.9%)' // changed bg from white
   Frame.style.border = '1px solid transparent'
   Frame.style.display = 'flex'
+  Frame.style.padding = '0px' // added  test padding
   Frame.style.alignItems = 'center'
   Frame.style.justifyContent = 'center'
   Frame.style.position = 'fixed'
-  Frame.style.top = '50%'
-  Frame.style.left = '50%'
-  Frame.style.width = '500px'
+  Frame.style.top = '35%' // change positions
+  Frame.style.left = '89%'
+  Frame.style.width = '370px'
   Frame.style.minHeight = '600px'
   Frame.style.transform = 'translate(-50%, -50%)'
   Frame.style.zIndex = '1000000120'
   Frame.style.boxSizing = 'border-box'
-  Frame.style.borderRadius = '3px'
+  Frame.style.borderRadius = '7px'
   Frame.style.overflow = 'hidden'
   Frame.style.boxShadow =
     'rgba(0, 0, 0, 0.075) 0px 1px 1px, rgba(0, 0, 0, 0.075) 0px 2px 2px, rgba(0, 0, 0, 0.075) 0px 4px 4px, rgba(0, 0, 0, 0.075) 0px 8px 8px, rgba(0, 0, 0, 0.075) 0px 16px 16px'
