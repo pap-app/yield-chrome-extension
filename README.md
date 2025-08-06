@@ -26,7 +26,7 @@ Follow these steps to load YieldPilot in your browser locally:
 pnpm install
 ```
 
-### 2. Run Development Server
+### 3. Run Development Server
 
 ```bash
 pnpm dev
@@ -34,7 +34,21 @@ pnpm dev
 This will automatically generate a dist folder.
 ```
 
-### 2. Open Chrome Extensions Page
+### 4. Open Chrome Extensions Page
 
 - Visit: chrome://extensions/
 - Toggle Developer Mode (top-right corner)
+
+### 5. Load the Unpacked Extension
+
+- Click "Load Unpacked"
+- Select the folder:
+
+```bash
+dist/chrome
+```
+
+# Quick Links
+
+- Back-end Repository [**Link**](https://github.com/YieldPilot/preview)
+- Web Preview Repository [**Link**](https://github.com/YieldPilot/preview)
