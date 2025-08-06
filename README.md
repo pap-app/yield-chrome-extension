@@ -43,12 +43,13 @@ This will automatically generate a dist folder.
 
 - Click "Load Unpacked"
 - Select the folder:
+  dist/chrome
 
-```bash
-dist/chrome
-```
+✅ You're Done!
+The extension will now be visible in your Chrome extensions bar.
+[ View step-by-step tutorial on loading unpacked Chrome extensions](https://www.youtube.com/watch?v=NH5CPm9pyts)
 
 # Quick Links
 
-- Back-end Repository [**Link**](https://github.com/YieldPilot/preview)
-- Web Preview Repository [**Link**](https://github.com/YieldPilot/preview)
+- [**Back-end Repository**](https://github.com/pap-app/yield-backe-end)
+- [**Web Preview Repository**](https://github.com/pap-app/extension-preview)
