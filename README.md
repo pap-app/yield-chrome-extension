@@ -20,8 +20,21 @@ Follow these steps to load YieldPilot in your browser locally:
    cd yield-chrome-extension
    ```
 
-2. **Install Dependencies (using PNPM)**
+### 2. Install Dependencies (using PNPM)
 
 ```bash
- pnpm install
+pnpm install
 ```
+
+### 2. Run Development Server
+
+```bash
+pnpm dev
+
+This will automatically generate a dist folder.
+```
+
+### 2. Open Chrome Extensions Page
+
+- Visit: chrome://extensions/
+- Toggle Developer Mode (top-right corner)
