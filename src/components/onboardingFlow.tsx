@@ -17,7 +17,11 @@ import 'swiper/css/navigation'
 import { connectStellarWallet, getWalletAddress } from '@/lib/wallet/connectors'
 import { useRegisterUser } from '@/lib/registerAccount'
 import { useWallet } from './providers/walletProvider'
-import flow1 from '../assets/img/flow-1.png'
+import flow1 from '../assets/img/xtension-2.png'
+import flow2 from '../assets/img/xtension-3.png'
+import flow3 from '../assets/img/xtension-4.png'
+import flow4 from '../assets/img/xtension-5.png'
+
 interface OnboardingFlowProps {
   onComplete: () => void
 }
@@ -44,7 +48,7 @@ const onboardingSlides = [
     icon: Shield,
     color: 'from-green-500 to-teal-600',
     features: ['Up to 8.1% APY', 'Automated rebalancing', 'Risk optimization'],
-    image: flow1,
+    image: flow2,
   },
   {
     id: 3,
@@ -59,7 +63,7 @@ const onboardingSlides = [
       'Audited contracts',
       'Insurance coverage',
     ],
-    image: flow1,
+    image: flow3,
   },
   {
     id: 4,
@@ -70,6 +74,7 @@ const onboardingSlides = [
     icon: Wallet,
     color: 'from-emerald-500 to-green-600',
     features: ['One-click setup', 'No minimum deposit', 'Start earning today'],
+    image: flow4,
   },
 ]
 
@@ -118,7 +123,8 @@ export default function OnboardingFlow({ onComplete }: OnboardingFlowProps) {
   }
 
   const handleSkip = () => {
-    onComplete()
+    //onComplete()
+    swiperInstance.slideNext()
   }
 
   return (
@@ -138,10 +144,7 @@ export default function OnboardingFlow({ onComplete }: OnboardingFlowProps) {
           className="h-full"
         >
           {onboardingSlides.map((slide, index) => (
-            <SwiperSlide
-              key={slide.id}
-              className="mb-3 flex h-[430px] flex-col border-b border-yellow-400"
-            >
+            <SwiperSlide key={slide.id} className="flex h-[450px] flex-col">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -151,7 +154,7 @@ export default function OnboardingFlow({ onComplete }: OnboardingFlowProps) {
                 {/* Icon */}
                 <img
                   src={slide.image}
-                  className="h-full w-full border border-red-500"
+                  className="mb-3 h-[440px] w-full object-cover"
                 />
               </motion.div>
             </SwiperSlide>
