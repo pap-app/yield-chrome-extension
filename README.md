@@ -16,19 +16,12 @@ Follow these steps to load YieldPilot in your browser locally:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/YieldPilot/extension.git
-   cd extension
+   git clone https://github.com/pap-app/yield-chrome-extension
+   cd yield-chrome-extension
    ```
 
-Install Dependencies (using PNPM)
+2. **Install Dependencies (using PNPM)**
 
-bash
-Copy
-Edit
-pnpm install
-Run Development Server
-
-bash
-Copy
-Edit
-pnpm dev
+```bash
+ pnpm install
+```
