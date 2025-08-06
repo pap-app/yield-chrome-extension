@@ -95,8 +95,8 @@ export default function VaultDetails() {
   console.log('balances', balances)
 
   // Mock user balance
-  //const userBalance = 0
-  const userBalance = getSmartBalance(balances?.balance)
+  const userBalance = 2
+  //const userBalance = getSmartBalance(balances?.balance)
   const userVaultBalance = 0
 
   const handleBack = () => {
